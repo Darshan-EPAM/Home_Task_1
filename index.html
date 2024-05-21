@@ -9,15 +9,15 @@
 
 <body>
     <!-- header -->
-    <div class="nav">
-        <div class="nav-s">
+    <div class="header">
+        <div class="heading">
         <h2>News Blog</h2>
         <p>World Wide News</p>
         </div>
     </div>
 
     <!-- sub-header -->
-    <div class="container">
+    <div class="sub-heading grid-container">
         <div class="news-item">
             <label>Select Category:</label>
             <select name="category">
@@ -28,14 +28,16 @@
             </select>
         </div>
         <div class="news-item">
-            <h2 style="font-size: x-large;">WORLD NEWS</h2>
+            <h2>WORLD NEWS</h2>
         </div>
 
         <div class="news-item">
-            <label>Subscribed here...</label>
-            <input class="email-p" type="email" placeholder="email address">
+            <label for="email">Subscribed here...</label>
+            <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="email-p" type="email" placeholder="Enter an email">
             <button>subscribe</button>
         </div>
+
+       
     </div>
     <hr>
 

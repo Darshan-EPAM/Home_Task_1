@@ -14,7 +14,7 @@ html, body {
     height: 100%;
 }
 
-.nav {
+.header {
     background-color: var(--primary-color);
     display: flex;
     text-align: center;
@@ -25,14 +25,14 @@ html, body {
 
 }
 
-.nav-s {
+.heading {
     height: 10%;
     width: 15%;
     background-color: white;
     color: black;
     border-radius: 5px;
 }
-.container {
+.sub-heading {
     display: flex;
     justify-content: space-between;
 
@@ -42,6 +42,10 @@ html, body {
     width: 15%;
     padding: 5px;
     margin: 10px;
+}
+
+.news-item > h2 {
+    font-size: 30px;
 }
 
 select {
@@ -58,10 +62,7 @@ select {
     margin: 5px;
     
 }
-#email {
-    font-size:xx-large;
 
-}
 .email-p {
     padding: 5px;
     margin: 5px;
@@ -98,7 +99,18 @@ img {
 
 a {
     text-decoration: none;
-    color: rgb(183, 183, 199);
+    color: rgb(240, 240, 247);
+}
+
+.news h3 {
+    font-size: 30px;
+    
+}
+.news h5 {
+    font-size: 20px;
+}
+.news p {
+    font-size: 18px;
 }
 
 a:hover {
@@ -114,7 +126,7 @@ button {
 }
 
 button:hover {
-    background-color: white;
+    background-color: rgb(232, 221, 221);
     color: var(--primary-color);
 
 }
@@ -127,7 +139,7 @@ button:hover {
         width: 100%;
     }
 
-   .nav {
+   .header {
     background-color: var(--primary-color);
     display: flex;
     text-align: center;
@@ -139,20 +151,35 @@ button:hover {
 
    }
 
-   .nav-s {
-    width: 25%;
+   .heading {
+    width: 35%;
+    padding: 5px;
+    margin: 15px;
     background-color: white;
     color: black;
-    border-radius: 3px;
+    border-radius: 5px;
 
    }
 
-   .container {
-    flex-direction: column;
+   .sub-heading {
+    /* flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
+    /* display: grid; */
 
    }
+
+   .grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 5px;
+    justify-items: center;
+    align-items: center;
+   }
+
+
 
    .news-item {
     width: 5%;
@@ -160,6 +187,12 @@ button:hover {
     margin: 3px;
 
    }
+
+   .news-item h2 {
+    display: none;
+    font-size: larger;
+   }
+
    section {
     flex-direction: column;
     align-items: center;
