@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 :root {
     --primary-color: rgb(15, 15, 16);
-} */
+}
 
- body {
-    font-family: "Satisfy", cursive;
+body {
+    font-family: 'Lora', serif;
 }
 
 html, body {
@@ -16,10 +17,10 @@ html, body {
 .header {
     background-color: var(--primary-color);
     display: flex;
+    width: 100%;
     text-align: center;
     justify-content: center;
     padding: 10px;
-    margin: 3px;
     border-radius: 3px;
 
 }
@@ -31,54 +32,72 @@ html, body {
     color: black;
     border-radius: 5px;
 }
-.sub-heading {
-    display: flex;
-    justify-content: space-between;
 
+.grid-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
 }
 
 .news-item {
-    width: 15%;
+    font-size: 20px;
+    width: 13%;
+    text-align: center;
     padding: 5px;
-    margin: 10px;
+    margin: 20px;
 }
 
-.news-item > h2 {
-    font-size: 30px;
+.news-item label, option {
+    font-size: 22px;
 }
 
 select {
     color: #333;
     background-color: #f0f0f0; 
-    font-size: 15px; 
+    font-size: 20px; 
     padding: 3px;
     margin: 4px;
     border-radius: 3px;
 }
 
-.news-item {
-    padding: 5px;
-    margin: 5px;
-    
+.news-item1 {
+    text-align: center;
+    font-size: xx-large;
 }
 
-.email-p {
+.email1 {
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+
+}
+
+.email1 label {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#email-p {
+    display: flex;
     padding: 5px;
     margin: 5px;
     border-radius: 3px;
+    
 }
 
-.news-item > button {
+.submit {
     padding: 5px;
     cursor: pointer;
     margin: 3px;
-    font-weight: 500;
+    font-size: 17px;
     background-color: var(--primary-color);
     color: white;
-    border-radius: 4px;  
+    border-radius: 5px;  
 }
 
-.news-item > button :hover  {
+.submit:hover  {
     background-color: white;
     color: var(--primary-color);
 
@@ -87,53 +106,49 @@ select {
 section {
     display: flex;
     padding: 5px;
-
 }
 
 img {
-    height: 200px;
-    width: 250px;
+   height: 100%;
+   width: 50vh;
 
 }
 
-a {
-    text-decoration: none;
-    color: rgb(240, 240, 247);
+.news_heading {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
-.news h3 {
-    font-size: 30px;
-    
-}
-.news h5 {
-    font-size: 20px;
-}
-.news p {
-    font-size: 18px;
+.text {
+    font-size: 22px;
 }
 
-a:hover {
-    color: var(--primary-color);
-}
 
-button {
+
+article button {
+    font-size: 17px;
     padding: 5px;
     margin: 5px;
     border-radius: 4px;
+    color: white;
     background-color: var(--primary-color); 
 
 }
 
 button:hover {
-    background-color: rgb(232, 221, 221);
+    background-color: white;
     color: var(--primary-color);
 
 }
 
 
+ 
+/* MEDIA QUERY */
+
+
 @media only screen and (max-width: 600px) {
 
-    html, height {
+    html, body {
         height: 100%;
         width: 100%;
     }
@@ -142,15 +157,13 @@ button:hover {
     background-color: var(--primary-color);
     text-align: center;
     justify-content: center;
-    padding: 5px;
-    margin: 10px;
     width: 100%;
-    border-radius: 3px;
+    
 
    }
 
    .heading {
-    width: 35%;
+    width: 40%;
     padding: 5px;
     margin: 15px;
     background-color: white;
@@ -159,37 +172,74 @@ button:hover {
 
    }
 
-   .sub-heading {
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-
-    /* display: grid; */
-
-   }
-
    .grid-container {
     display: grid;
+    width: 100%;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    gap: 5px 5px;
+    gap: 5px;
     justify-items: center;
-    align-items: center;
+    align-items: center; 
    }
 
+   .news-item1 {
+    grid-row: 1;
+    grid-column: 1/-1;
+    justify-items: center;
+   }
+
+
+   .news-item,.email1 {
+    grid-row: 2;
+    grid-column: auto;
+   }
+
+   .news-item label, option {
+    font-size: 15px;
+}
+
+select {
+    font-size: 15px;
+}
 
 
    .news-item {
-    width: 5%;
+    width: 100%;
     padding: 3px;
     margin: 3px;
-
    }
 
-   .news-item h2 {
-    display: none;
-    font-size: larger;
-   }
+   .news-item1 {
+    text-align: center;
+    font-size: large;
+}
+
+
+   .email1 label {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+#email-p {
+    display: flex;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 2px;
+    
+}
+.submit {
+    font-size: 14px;
+}
+
+.news_heading {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.text {
+    font-size: 17px;
+}
+
 
    section {
     flex-direction: column;
